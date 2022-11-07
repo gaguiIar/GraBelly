@@ -1,6 +1,25 @@
 
 import './App.css';
 
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from "firebase/analytics";
+
+// TODO: Replace the following with project config
+const firebaseConfig = {
+  apiKey: "AIzaSyCGQ0tYppWFJkuSxBhOpkH0xVDmX245Vdc",
+  authDomain: "project-id.firebaseapp.com",
+  databaseURL: "https://project-id.firebaseio.com",
+  projectId: "project-id",
+  storageBucket: "project-id.appspot.com",
+  messagingSenderId: "637908496727",
+  appId: "2:637908496727:web:a4284b4c99e329d5",
+  measurementId: "G-9VP01NDSXJ"
+};
+
+const app = initializeApp(firebaseConfig);
+// Initialize Analytics
+const analytics = getAnalytics(app);
+
 function App() {
   return (
     <div className="App">
